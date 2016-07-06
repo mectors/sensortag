@@ -1,0 +1,17 @@
+name: sensortag
+version: 1.0.5
+summary: SensorTag Python Bluetooth LE implementation
+description: API and command line tools for Python Bluetooth Low Energy access
+confinement: devmode
+
+apps:
+  sensortag:
+    command: usr/bin/sensortag
+    slots: [bluez]
+
+parts:
+  bluepy:
+    plugin: python3
+    source: https://github.com/IanHarvey/bluepy
+    source-type: git
+    build-packages: [libglib2.0-dev]
