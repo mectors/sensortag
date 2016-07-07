@@ -26,5 +26,12 @@ Connecting to A0:E6:F8:B6:E7:86
 ('Gyroscope: ', (1.13677978515625, 0.091552734375, -2.54058837890625))
 ('Light: ', 7.640000000000001)
 
-
 This snap works with the TI CC2650 multi-standard SensorTag.
+
+- Temp: Ambient and Object temperature (Cs)
+- Humidity: Ambient temperature (Cs) and relative humidity (%)
+- Barometer: Temperature (Cs) and Air Pressure (hPa)
+- Accelerometer: X,Y,Z axis with a default period for the data is one second. (Gs)
+- Magnetometer: Strength of a magnetic field in the three axis (uT)
+- Gyroscope: Rotational motion (degrees/second)
+- Light: Ambient Light (Lux)
