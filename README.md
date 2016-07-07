@@ -8,11 +8,12 @@ Clone or dowload the repo to a Linux device running snapcraft 2.x and build the 
 
 Use hcitool lescan to get the sensortag address:
 
+```
 ~$ sudo hcitool lescan
 LE Scan ...
 A0:E6:F8:B6:E7:86 (unknown)
 A0:E6:F8:B6:E7:86 CC2650 SensorTag
-
+```
 
 Call sensortag with --all to get reading from all the sensors and -n 2 to get two readings, do specify the address of your sensortag device.
 
