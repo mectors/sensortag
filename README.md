@@ -16,6 +16,7 @@ A0:E6:F8:B6:E7:86 CC2650 SensorTag
 
 Call sensortag with --all to get reading from all the sensors and -n 2 to get two readings, do specify the address of your sensortag device.
 
+```
 ~$ sudo sensortag --all -n 1 A0:E6:F8:B6:E7:86
 Connecting to A0:E6:F8:B6:E7:86
 ('Temp: ', (26.125, 19.375))
@@ -25,6 +26,7 @@ Connecting to A0:E6:F8:B6:E7:86
 ('Magnetometer: ', (-20.841514041514042, 21.44126984126984, -31.337240537240536))
 ('Gyroscope: ', (1.13677978515625, 0.091552734375, -2.54058837890625))
 ('Light: ', 7.640000000000001)
+```
 
 This snap works with the TI CC2650 multi-standard SensorTag.
 
