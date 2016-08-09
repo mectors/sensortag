@@ -7,7 +7,7 @@ confinement: strict
 apps:
   sensortag:
     command: usr/bin/sensortag
-    slots: [bluez]
+    plugs: [bluez]
 
 parts:
   bluepy:
