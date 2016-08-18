@@ -1,4 +1,5 @@
-name: sensortag
+# Change the name file to provide a custom name for the snap
+name: XXXsensortagXXX
 version: 1.0.5
 summary: SensorTag Python Bluetooth LE implementation
 description: API and command line tools for Python Bluetooth Low Energy access
