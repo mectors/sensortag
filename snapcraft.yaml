@@ -7,7 +7,7 @@ grade: stable
 
 apps:
   sensortag:
-    command: bin/sensortag
+    command: usr/bin/sensortag
     plugs: [bluetooth-control, network-bind]
 
 parts:
