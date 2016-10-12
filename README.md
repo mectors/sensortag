@@ -15,6 +15,12 @@ A0:E6:F8:B6:E7:86 (unknown)
 A0:E6:F8:B6:E7:86 CC2650 SensorTag
 ```
 
+Before the service will start you will need to put the Sensortag UUID:
+ /snap/bin/sensortag.sensortag-init A0:E6:F8:B6:E7:86 [substitute by your UUID]
+
+ Also make sure the snap has bluetooth-control
+ sudo snap connect sensortag:bluetooth-control ubuntu-core:bluetooth-control
+
 Call sensortag with --all to get reading from all the sensors and -n 2 to get two readings, do specify the address of your sensortag device.
 
 ```

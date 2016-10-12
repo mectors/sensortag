@@ -1,0 +1,2 @@
+#!/bin/sh
+smartedge config --dir $SNAP_COMMON --clientid sensortag --host localhost --port 11388 --conf $1

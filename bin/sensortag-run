@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ ! -f $SNAP_COMMON/transport.json ]; then
+  echo PLEASE INITIALIZE BEFORE RUNNIG THE SERVICE
+  echo sudo /snap/bin/sensortag.sensortag-init A0:E6:F8:B6:E7:86 [substitute by your UUID - sudo hcitool lescan - search for SensorTag]
+  echo afterwards restart with
+  echo sudo snap disable sensortag
+  echo sudo snap enable sensortag
+  exit 1
+fi
+smartedge inmqtt --dir $SNAP_COMMON

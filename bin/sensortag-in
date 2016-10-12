@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ ! -f $SNAP_COMMON/transport.json ]; then
+  sensortag-init
+fi
+sensortaguuid=`cat $SNAP_COMMON/configservice.json`
+sensortag --all -n 1 $sensortaguuid

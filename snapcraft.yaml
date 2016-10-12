@@ -6,13 +6,33 @@ confinement: strict
 grade: stable
 
 apps:
-  sensortag:
-    command: usr/bin/sensortag
-    plugs: [bluetooth-control, network-bind]
-
+  sensortag-run:
+    command: bin/sensortag-run
+    daemon: simple
+    plugs: [bluetooth-control, network-bind, network]
+  sensortag-in:
+    command: bin/sensortag-in
+    plugs: [bluetooth-control, network-bind, network]
+  sensortag-init:
+      command: bin/sensortag-init
+      plugs: [bluetooth-control, network-bind, network]
+  sensortag-config:
+      command: bin/sensortag-config
+      plugs: [bluetooth-control, network-bind, network]
 parts:
   bluepy:
     plugin: python3
-    source: https://github.com/IanHarvey/bluepy
+    source: https://github.com/mectors/bluepy
     source-type: git
     build-packages: [libglib2.0-dev]
+  smartedge:
+     plugin: go
+     source: https://github.com/mectors/smartedge.git
+  move:
+    plugin: dump
+    source: .
+    filesets:
+      sensortag-run: bin/sensortag-run
+      sensortag-init: bin/sensortag-init
+      sensortag-in: bin/sensortag-in
+      sensortag-config: bin/sensortag-config
